@@ -20,7 +20,7 @@ RUN mvn package
 #Go to target path (it include war file)
 WORKDIR target
 #Copy file to path of tomcat
-COPY hello-1.0.war /var/lib/tomcat9/webapps/
+COPY *.war /var/lib/tomcat9/webapps/
 #Forward ports
 EXPOSE 8080
 #RUN rm -rf /var/www/html/*
