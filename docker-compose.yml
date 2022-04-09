@@ -10,7 +10,7 @@ services:
 #    volumes_from:
 #      - php
   servprod:
-    image: tomcat
+    image: tomcat:9.0
 #    environment:
 #     - TYPO3_CONTEXT=Development/Docker
 #    links:
