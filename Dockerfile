@@ -7,10 +7,8 @@ RUN apt-get update && apt-get install default-jdk -y && apt-get install maven -y
 WORKDIR boxfuse-sample-java-war-hello
 #Create war file
 RUN mvn package
-#Go to target path (it include war file)
-WORKDIR target
 #Copy file to path of tomcat
-RUN cp hello-1.0.war /var/lib/tomcat9/webapps/
+RUN cp target/hello-1.0.war /var/lib/tomcat9/webapps/
 #Forward ports
 EXPOSE 8080
     #CMD ["tomcat", "-g", "daemon off;"]
